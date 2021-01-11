@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTimer } from 'react-timer-hook';
 
-function MyTimer({ expiryTimestamp }) {
+function Timer({ expiryTimestamp }) {
   const {seconds, minutes} = useTimer({ expiryTimestamp });
 
   return (
@@ -16,7 +16,7 @@ export default function App() {
   time.setSeconds(time.getSeconds() + 120); 
   return (
     <div>
-      <MyTimer expiryTimestamp={time} />
+      <Timer expiryTimestamp={time} />
     </div>
   );
 }
