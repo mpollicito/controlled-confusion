@@ -14,4 +14,11 @@ const Card = ({ id, isFlipped, handleClick, cardNumber }) => (
 
 export default Card;
 
-
+/* <div class="row">
+<div class="col s12 m5">
+  <div class="card-panel teal">
+    <span class="white-text">Card image
+    </span>
+  </div>
+</div>
+</div> */
