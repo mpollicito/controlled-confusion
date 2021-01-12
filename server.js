@@ -5,7 +5,7 @@ const app = express();
 const mongoose = require("mongoose");
 
 const highscores = require("./models/memorygame");
-
+const Highscore = require("./models/highscore.js");
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -27,7 +27,15 @@ app.post("/submit", ({ body }, res) => {
 });
 
 // Define API routes here
-
+app.post("/highscore", ({ body }, res) => {
+  Highscore.create(body)
+    .then(dbHighscore => {
+      res.json(dbHighscore);
+    })
+    .catch(err => {
+      res.json(err);
+    });
+});
 // Send every other request to the React app
 // Define any API routes before this runs
 app.get("*", (req, res) => {
