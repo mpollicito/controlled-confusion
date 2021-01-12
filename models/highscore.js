@@ -1,27 +1,20 @@
-// const mongoose = require("mongoose");
-// const Schema = mongoose.Schema;
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 
-// const highscoreSchema = new mongoose.Schema({
-//   title: {
-//     type: String,
-//     required: true
-//   },
-//   // url string for thumbnail image
-//   thumbnail: {
-//     type: String,
-//     default: ""
-//   },
-//   // url for highscore web page - unique index
-//   href: {
-//     type: String,
-//     default: "",
-//     unique: true
-//   },
+const HighscoreSchema = new Schema({
+  name: {
+    type: String,
+    trim: true,
+    required: "String is Required"
+  },
 
+  highscore: {
+    type: Number,
+    required: true
+  },
 
-//   highscore: [String]
-// });
+});
 
-// const Highscore = mongoose.model("Highscore", highscoreSchema);
+const Highscore = mongoose.model("Highscore", HighscoreSchema);
 
-// module.exports = Highscore;
+module.exports = Highscore;
