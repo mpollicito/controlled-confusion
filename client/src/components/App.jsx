@@ -4,6 +4,7 @@ import Card from "./Card";
 import Board from "./Board";
 import Nav from "./Nav";
 import Timer from "./Timer";
+import Score from "./Score";
 
 
 function App() {
@@ -16,11 +17,10 @@ function App() {
       <Card />
       <br></br>
       <Board />
+      <Score />
     </div>
   );
 }
-
-
 
 
 
