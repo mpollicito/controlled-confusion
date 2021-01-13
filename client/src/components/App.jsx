@@ -1,10 +1,11 @@
 import React from "react";
-import { Component } from "react";
-import Card from "./Card";
-import Board from "./Board";
 import Nav from "./Nav";
+// import Gameboard from "./Gameboard";
 import Timer from "./Timer";
+import Card from "./Card";
+import Highscores from "./Highscores";
 import Score from "./Score";
+
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
       <Card />
       <Card />
       <br></br>
-      <Board />
+      <Highscores />
       <Score />
     </div>
   );
