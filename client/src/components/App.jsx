@@ -1,8 +1,7 @@
 import React from "react";
 import Nav from "./Nav";
-// import Gameboard from "./Gameboard";
+import Gameboard from "./Gameboard";
 import Timer from "./Timer";
-import Card from "./Card";
 import Highscores from "./Highscores";
 import Score from "./Score";
 
@@ -12,9 +11,7 @@ function App() {
     <div>
       <Nav />
       <Timer />
-      <Card />
-      <Card />
-      <Card />
+      <Gameboard />
       <br></br>
       <Highscores />
       <Score />
