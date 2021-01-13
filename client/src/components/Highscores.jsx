@@ -1,6 +1,6 @@
 import React from "react";
 
-function Board() {
+function Highscores() {
     return (
         <table class="responsive-table">
             <thead>
@@ -32,4 +32,4 @@ function Board() {
     );
 }
 
-export default Board;
+export default Highscores;
