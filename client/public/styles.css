@@ -1,0 +1,18 @@
+
+.card-front {
+    background-color: teal;
+    border-width: 4px;
+    border-color: lightgray;
+    border-style: solid;
+}
+
+.card-back {
+    background-color: black;
+    border-width: 4px;
+    border-color: lightgray;
+    border-style: solid;
+}
+
+.card-front:hover {
+    border-color: yellow;
+}
