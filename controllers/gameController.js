@@ -18,9 +18,18 @@ module.exports = {
         .catch(err => res.status(422).json(err));
     },
 
+    findById: function(req, res) {
+        db.Highscore
+        console.log("find id")
+          .findById(req.params.id)
+          .then(scoreList => res.json(scoreList))
+          .catch(err => res.status(422).json(err));
+      },
+
     update: function(req, res) {
         console.log("update call")
         db.Highscore
+        .findById({_id: req.params.id })
         .newList(req.body)
         .then(scoreList => res.json(scoreList))
         .catch(err => res.status(422).json(err));
