@@ -1,20 +1,22 @@
 import React from "react";
-// import { Component } from "react";
-// import Card from "./Card";
-// import Board from "./Board";
-// import Nav from "./Nav";
+import Nav from "./Nav";
+import Gameboard from "./Gameboard";
 import Timer from "./Timer";
+import Highscores from "./Highscores";
+import Score from "./Score";
+
 
 function App() {
-  const time = new Date();
-time.setSeconds(time.getSeconds() + 600);
   return (
     <div>
-      <Timer expiryTimestamp={time} />
+      <Nav />
+      <Timer />
+      <Gameboard />
+      <br></br>
+      <Highscores />
+      <Score />
     </div>
   );
 }
-
-
 
 export default App;
