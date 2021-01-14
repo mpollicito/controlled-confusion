@@ -14,7 +14,7 @@ function createCard(singleCard) {
 function Gameboard() {
     return (
         <div>
-            {deck.map(createCard)}
+            {deck.map(card => createCard(card))}
         </div>
     )
 }

@@ -22,7 +22,7 @@ class Card extends Component {
           <div class="row">
             <div class="col s12 m5">
               <div onClick={this.handleClick} className="card-back card-panel">
-                <span class="white-text">Back Card Image</span>
+                {/* <span class="white-text">Back Card Image</span> */}
               </div>
             </div>
           </div>
@@ -32,7 +32,8 @@ class Card extends Component {
           <div class="row">
             <div class="col s12 m5">
               <div onClick={this.handleClick} className="card-front card-panel">
-              <span class="white-text">Front Card image</span>
+              <img src={this.props.img} />
+              {/* <span class="white-text">Front Card image</span> */}
               </div>
             </div>
           </div>
