@@ -4,6 +4,7 @@
     border-width: 4px;
     border-color: lightgray;
     border-style: solid;
+    background-image: url("./card_back.png");
 }
 
 .card-front {

@@ -1,9 +1,9 @@
 const deck = [
     { id: 1,
-      img: "./public/card_back.png",
+      img:"./public/card_cat.png",
     },
     { id: 2,
-      img: "",
+      img:"./public/card_cat.png",
     },
     { id: 3,
       img: "",
