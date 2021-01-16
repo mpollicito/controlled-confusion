@@ -4,14 +4,17 @@
     border-width: 4px;
     border-color: lightgray;
     border-style: solid;
-    background-image: url("./card_back.png");
+    background-image: url("./images/card_back.png");
+    height: 590px;
+    width: 397px;
 }
 
 .card-front {
-    background-color: darkslategray;
     border-width: 4px;
     border-color: lightgray;
     border-style: solid;
+    height: 610px;
+    width: 420px;
 }
 
 .card-back:hover {
