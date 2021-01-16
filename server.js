@@ -18,6 +18,17 @@ if (process.env.NODE_ENV === "production") {
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/userdb", { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true });
 
+mongoose.connect(
+  process.env.MONGODB_URI || 'mongodb://localhost/memorygame',
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
+  }
+);
+
+
 app.post("/submit", ({ body }, res) => {
   User.create(body)
     .then(dbUser => {
