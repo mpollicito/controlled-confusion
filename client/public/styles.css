@@ -1,19 +1,29 @@
+.card-front img{  
+    height: 100%;
+    margin: 0 auto;  
+}
 
 .card-back {
-    background-color: teal;
-    border-width: 4px;
-    border-color: lightgray;
+    background-image: url("./images/Card_back.jpg");
+    background-size: 100%;
+    border-width: .05px;
+    border-color: rgba(211, 211, 211, 0.199);
     border-style: solid;
-    background-image: url("./card_back.png");
+    border-radius: 12px;
+    height: 600px;
+    width: 600px;
 }
 
 .card-front {
-    background-color: darkslategray;
-    border-width: 4px;
+    border-width: .05px;
     border-color: lightgray;
     border-style: solid;
+    border-radius: 12px;
+    height: 600px;
+    width: 600px;
+
 }
 
-.card-back:hover {
-    border-color: yellow;
+.card-back:hover, .card-front:hover {
+    border-color: lime;
 }
