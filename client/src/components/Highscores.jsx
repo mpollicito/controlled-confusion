@@ -2,7 +2,7 @@ import React from "react";
 
 function Highscores() {
     return (
-        <table class="responsive-table">
+        <table className="responsive-table">
             <thead>
                 <tr>
                     <th>Name</th>
