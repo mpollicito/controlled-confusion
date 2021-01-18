@@ -9,6 +9,9 @@
     border-width: .05px;
     border-color: rgba(211, 211, 211, 0.199);
     border-style: solid;
+    border-radius: 12px;
+    height: 600px;
+    width: 600px;
 }
 
 .card-front {
