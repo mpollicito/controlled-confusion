@@ -1,14 +1,16 @@
 import React from "react";
-import Nav from "./components/Nav";
-import Gameboard from "./components/Gameboard";
-import Highscores from "./components/Highscores";
-import Score from "./components/Score";
+import Nav from "./Nav";
+import Gameboard from "./Gameboard";
+import Timer from "./Timer";
+import Highscores from "./Highscores";
+import Score from "./Score";
 
 
 function App() {
   return (
     <div>
       <Nav />
+      <Timer />
       <Gameboard />
       <br></br>
       <Highscores />
