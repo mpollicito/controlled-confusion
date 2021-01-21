@@ -7,18 +7,21 @@
     background-image: url("./images/Card_back.jpg");
     background-size: 100%;
     border-width: .05px;
-    border-color: rgba(211, 211, 211, 0.199);
-    border-style: solid;
-}
-
-.card-front {
-    border-width: .05px;
-    border-color: lightgray;
+    border-color: grey;
     border-style: solid;
     border-radius: 12px;
     height: 600px;
     width: 600px;
+}
 
+.card-front {
+    /* background-size: 100%; */
+    border-width: .05px;
+    border-color: grey;
+    border-style: solid;
+    border-radius: 12px;
+    height: 600px;
+    width: 600px;
 }
 
 .card-back:hover, .card-front:hover {
