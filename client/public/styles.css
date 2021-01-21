@@ -4,26 +4,25 @@
 }
 
 .card-back {
-    background-image: url("./images/Card_back.jpg");
+    background-image: url("./images/Card_back.png");
     background-size: 100%;
-    border-width: .05px;
     border-color: grey;
     border-style: solid;
-    border-radius: 12px;
-    height: 600px;
-    width: 600px;
+    border-radius: 16px;
+    height: 200px;
+    width: 200px;
 }
 
 .card-front {
-    /* background-size: 100%; */
-    border-width: .05px;
+    background-size: 100%;
     border-color: grey;
     border-style: solid;
-    border-radius: 12px;
-    height: 600px;
-    width: 600px;
+    border-radius: 16px;
+    height: 200px;
+    width: 200px;
 }
 
 .card-back:hover, .card-front:hover {
     border-color: lime;
+    border-width: 1.25px;
 }

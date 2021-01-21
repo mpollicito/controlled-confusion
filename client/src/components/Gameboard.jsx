@@ -54,7 +54,7 @@ class Gameboard extends React.Component {
           name="action"
         >
           Start Game
-          <i className="material-icons right">Start</i>
+          <i className="material-icons right"></i>
         </button>
         {deck.map((card) => createCard(card))}
       </div>
