@@ -23,24 +23,20 @@ class Card extends Component {
     return (
       <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="vertical">
         <div>
-          <div className="row">
-            <div className="col s12 m5">
+            <div className="col s12 m4">
               <div onClick={this.handleClick} className="card-back card-panel" src={this.props.img}>
                 {/* <span class="white-text">Back Card Image</span> */}
               </div>
             </div>
-          </div>
         </div>
 
         <div>
-          <div className="row">
-            <div className="col s12 m5">
+            <div className="col s12 m4">
               <div onClick={this.handleClick} className="card-front card-panel">
               <img src={this.props.img} character={this.props.character} />
               {/* <span class="white-text">Front Card image</span> */}
               </div>
             </div>
-          </div>
         </div>
       </ReactCardFlip>
     );

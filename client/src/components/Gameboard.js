@@ -22,19 +22,19 @@ class Gameboard extends React.Component {
 
   componentDidUpdate(prevState) {
     console.log(this.state.clickedCardOne, "LINE25")
-    if (this.state.clickedCardOne && this.state.clickedCardTwo){
+    if (this.state.clickedCardOne && this.state.clickedCardTwo) {
 
-      console.log(this.state.clickedCardOne , "state card 1");
-      console.log(this.state.clickedCardTwo , "state card 2")
-      if (this.state.clickedCardOne === this.state.clickedCardTwo){
+      console.log(this.state.clickedCardOne, "state card 1");
+      console.log(this.state.clickedCardTwo, "state card 2")
+      if (this.state.clickedCardOne === this.state.clickedCardTwo) {
         // do stuff
         alert("match!")
       }
       else {
- // if they don't match
+        // if they don't match
       }
-     
-      this.setState({clickedCardOne: "", clickedCardTwo:""})
+
+      this.setState({ clickedCardOne: "", clickedCardTwo: "" })
     }
   }
 
@@ -51,12 +51,12 @@ class Gameboard extends React.Component {
 
   compareCards(myCard) {
     console.log(myCard, "line 33 mycard")
-    
 
-    if (!this.state.clickedCardOne){
-      this.setState({clickedCardOne: myCard})
-    } else if (!this.state.clickedCardTwo){
-      this.setState({clickedCardTwo: myCard})
+
+    if (!this.state.clickedCardOne) {
+      this.setState({ clickedCardOne: myCard })
+    } else if (!this.state.clickedCardTwo) {
+      this.setState({ clickedCardTwo: myCard })
     }
 
     // if (this.state.clickedCardOne === this.state.clickedCardTwo) {
@@ -103,7 +103,9 @@ class Gameboard extends React.Component {
           Start Game
           <i className="material-icons right"></i>
         </button>
-        {deck.map((card) => this.createCard(card))}
+        <div className="row">
+          {deck.map((card) => this.createCard(card))}
+        </div>
       </div>
     );
   }
