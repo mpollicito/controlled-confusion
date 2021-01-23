@@ -19,6 +19,7 @@ class Gameboard extends React.Component {
 
 
   componentDidUpdate(prevState) {
+
     if (this.state.clickedCardOne && this.state.clickedCardTwo) {
 
       const cardOne = deck.filter((card)=>{
@@ -46,6 +47,7 @@ class Gameboard extends React.Component {
       }
   
       this.setState({ clickedCardOne: "", clickedCardTwo: "" });
+
     }
   }
 
@@ -75,6 +77,7 @@ class Gameboard extends React.Component {
       this.setState({ clickedCardOne: myCard });
     } else if (!this.state.clickedCardTwo && this.state.clickedCardOne != myCard) {
       this.setState({ clickedCardTwo: myCard });
+
     }
   }
 
@@ -112,8 +115,12 @@ class Gameboard extends React.Component {
         >
           Start Game
           <i className="material-icons right"></i>
-        </button>       
-        {this.state.myDeck.map((card) => this.createCard(card))}
+
+        </button>
+        <div className="row">
+           {this.state.myDeck.map((card) => this.createCard(card))}
+        </div>
+
       </div>
     );
   }
