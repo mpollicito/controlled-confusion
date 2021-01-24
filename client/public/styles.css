@@ -4,13 +4,13 @@
 }
 
 .card-back {
-    background-image: url("./images/Card_back.png");
+    background-image: url("./images/Card_back_v2.png");
     background-size: 100%;
     border-color: grey;
     border-style: solid;
     border-radius: 16px;
-    height: 200px;
-    width: 200px;
+    height: 250px;
+    width: 250px;
 }
 
 .card-front {
@@ -18,8 +18,8 @@
     border-color: grey;
     border-style: solid;
     border-radius: 16px;
-    height: 200px;
-    width: 200px;
+    height: 250px;
+    width: 250px;
 }
 
 .card-back:hover, .card-front:hover {
