@@ -26,3 +26,13 @@
     border-color: lime;
     border-width: 1.25px;
 }
+
+.timer {
+    font-size: 26px;
+    color: #26a69a;
+    margin: 0 87px;
+}
+
+.btn {
+    margin: 0 45px;
+}
