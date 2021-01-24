@@ -21,9 +21,9 @@ function Score() {
         </form>
       </div>
 
-      <button className="btn waves-effect waves-light" type="submit" name="action">
+      <button className="btn waves-effect waves-light" class="btn" type="submit" name="action">
         Submit
-        <i className="material-icons right">send</i>
+        <i className="material-icons right"></i>
       </button>
     </div>
   );

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Nav() {
   return (
     <nav>
-      <div className="nav-wrapper">
+      <div className="nav-wrapper" class="nav-wrapper">
         <Link className="brand-logo" to="/">
           Controlled Confusion
         </Link>
