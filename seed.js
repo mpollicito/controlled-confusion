@@ -17,6 +17,22 @@ let highscoreSeed = [
     name: "Morgan",
     highscore: 5
   },
+  {
+    name: "Matt",
+    highscore: 10
+  },
+  {
+    name: "Angela",
+    highscore: 6
+  },
+  {
+    name: "Susan",
+    highscore: 8
+  },
+  {
+    name: "Fred",
+    highscore: 3
+  },
 ];
 
 db.Highscore.deleteMany({})
