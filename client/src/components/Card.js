@@ -24,7 +24,7 @@ class Card extends Component {
     console.log(this.state.isFlipped, "isFlipped");
     // setTimeout(function )
     return (
-      <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="vertical">
+      <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="horizontal" flipSpeedBackToFront="0.00001" flipSpeedFrontToBack="0.00001">
         <div>
 
           <div className="col s12 m3">

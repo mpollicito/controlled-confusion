@@ -6,26 +6,30 @@ function Highscores() {
             <thead>
                 <tr>
                     <th>Name</th>
-                    <th>Score</th>
+                    <th>Best Time</th>
                 </tr>
             </thead>
 
             <tbody>
                 <tr>
-                    <td>Your Name</td>
-                    <td>Your Score</td>
+                    <td>Morgan</td>
+                    <td>100</td>
                 </tr>
                 <tr>
-                    <td>Your Name</td>
-                    <td>Your Score</td>
+                    <td>Matt</td>
+                    <td>10</td>
                 </tr>
                 <tr>
-                    <td>Your Name</td>
-                    <td>Your Score</td>
+                    <td>Angela</td>
+                    <td>6</td>
                 </tr>
                 <tr>
-                    <td>Your Name</td>
-                    <td>Your Score</td>
+                    <td>Susan</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>Fred</td>
+                    <td>3</td>
                 </tr>
             </tbody>
         </table>
