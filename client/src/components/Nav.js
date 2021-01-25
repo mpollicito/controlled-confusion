@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 function Nav() {
   return (
     <nav>
-      <div className="nav-wrapper">
+      <div className="nav-wrapper" class="nav-wrapper">
         <Link className="brand-logo" to="/">
-          Game Set Match
+          Controlled Confusion
         </Link>
         <ul id="nav-mobile" className="right hide-on-med-and-down">
           <li className="nav-item">

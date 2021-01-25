@@ -3,22 +3,29 @@ import Card from "./Card";
 import deck from "../deck";
 import Timer from "./Timer";
 
+// function createCard(singleCard) {
+//   return <Card key={singleCard.id} img={singleCard.img} />;
+// }
+
 class Gameboard extends React.Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
     this.createCard = this.createCard.bind(this);
-    this.setCardState = this.setCardState.bind(this);
+    this.compareCards = this.compareCards.bind(this);
     this.state = {
       running: false,
       clickedCardOne: "",
+
       clickedCardTwo: "",
       myDeck: deck,
       isMatch: false,
+
     };
   }
 
   componentDidUpdate(prevState) {
+
     if (this.state.clickedCardOne && this.state.clickedCardTwo) {
       const cardOne = deck.filter((card) => {
         return card.id == this.state.clickedCardOne;
@@ -60,10 +67,12 @@ class Gameboard extends React.Component {
         this.setState({ myDeck: newDeck, isMatch:false });
       }
       this.setState({ clickedCardOne: "", clickedCardTwo: "" });
+
     }
   }
 
   createCard(singleCard) {
+
     return (
       <Card
         key={singleCard.id}
@@ -76,6 +85,7 @@ class Gameboard extends React.Component {
         clickedCardTwo={this.state.clickedCardTwo}
       />
     );
+
   }
 
   handleClick() {
@@ -84,6 +94,7 @@ class Gameboard extends React.Component {
       running: true,
     });
   }
+
 
   setCardState(myCard) {
     console.log(myCard, "line 33 mycard");
@@ -94,8 +105,19 @@ class Gameboard extends React.Component {
       this.state.clickedCardOne != myCard
     ) {
       this.setState({ clickedCardTwo: myCard });
+
     }
+
+    // if (this.state.clickedCardOne === this.state.clickedCardTwo) {
+    //   // keep flipped to front
+    // }
+    // else {
+    //   // return both to flipped
+    // }
+    // 
   }
+
+
 
   renderTimer() {
     return <Timer />;
@@ -114,11 +136,12 @@ class Gameboard extends React.Component {
       deck[currentIndex] = deck[randomIndex];
       deck[randomIndex] = temporaryValue;
     }
+
     this.setState({ myDeck: deck });
+
 
     return deck;
   }
-
   render() {
     return (
       <div>
@@ -132,10 +155,12 @@ class Gameboard extends React.Component {
           Start Game
           <i className="material-icons right"></i>
         </button>
+
         <div className="row">
           {this.state.myDeck.map((card) => this.createCard(card))}
         </div>
         {console.log(this.state.myDeck, "myDeck line 143")}
+
       </div>
     );
   }
