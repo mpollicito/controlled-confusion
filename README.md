@@ -1,12 +1,13 @@
-# Game Set Match | React Memory Game
+# Controlled Confusion | React Memory Game
 
 ## Description
-Game Set Match is a browser based memory game, this app utilizes React to accomplish the needed actions to have our functioning game.  
+Controlled Confusion is a browser based memory game, this app utilizes React to accomplish the needed actions to have our functioning game. This is a single-player game in which you must put your memory capabilities to the test!  
 
 ## User Story
-AS A human who needs to improve memory,  
-WHEN I have the urge to play a memory game,  
-THEN I open Game Set Match and play!
+AS A developer,  
+WHEN I see the universal need to improve memory,  
+THEN I guide users to Controlled Confusion,  
+SO THAT I can help people of all ages with memory.
 
 ## Table of Contents
 * [Description](#descriptiom)
@@ -17,14 +18,14 @@ THEN I open Game Set Match and play!
 * [Credits](#credits)
 * [License](#license)
 
-## Installation
-Navigate to the follow link to play:
-Click the Start button to begin. Click a card and another to see if they match, repeat until every card has been successfully matched. 
+## Getting Started
+Navigate to the follow link to play:  
+Click the Start button to begin. Click a card and another to see if they match, repeat until every card has been successfully matched. Your score is based on time taken while matching.
 
-## Usage
-First, clone the repository for this app.  
-Navigate to the "src" folder, open the package-JSON file with your preferred terminal,  
-use `npm start` to start the react app. See [Test](#Test) for further info.
+## Local Usage
+First, clone the [repository](https://github.com/mpollicito/controlled-confusion) for this app to your local machine.  
+Navigate to the "src" folder and open the package-JSON file with your preferred terminal.  
+Use the command `npm start` to start the react app. See [test](#Test) for further info.
 
 ## Test
 To create your own react app use the following;  
