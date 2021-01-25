@@ -42,8 +42,6 @@ class Card extends Component {
 
         <div>
 
-          <div className="col s12 m4">
-
           <div className="col s12 m3">
 
             <div onClick={this.handleClick} className="card-front card-panel">
