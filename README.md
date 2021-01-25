@@ -33,7 +33,7 @@ To create your own react app use the following;
 After the process is complete, copy the "src" folder from this app  
 and paste it into your newly created React app.  
 Open this folder in your code editor of choice, open an integrated terminal and use  
-`npm start` to run the app, this command will automatically open your default browser to begin playing.
+`npm start` to run the app, this command will automatically open your default browser to begin playing.  
 
 ## Credits
 * [Angela Tooley](https://github.com/adt315)  
