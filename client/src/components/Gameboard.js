@@ -14,19 +14,17 @@ class Gameboard extends React.Component {
       clickedCardOne: "",
       clickedCardTwo: "",
       myDeck: deck,
+      isMatch: false,
     };
   }
 
-
   componentDidUpdate(prevState) {
-
     if (this.state.clickedCardOne && this.state.clickedCardTwo) {
-
-      const cardOne = deck.filter((card)=>{
-        return card.id == this.state.clickedCardOne
+      const cardOne = deck.filter((card) => {
+        return card.id == this.state.clickedCardOne;
       })[0];
-      const cardTwo = deck.filter((card)=>{
-        return card.id == this.state.clickedCardTwo
+      const cardTwo = deck.filter((card) => {
+        return card.id == this.state.clickedCardTwo;
       })[0];
 
       console.log(cardOne, "card1");
@@ -35,19 +33,33 @@ class Gameboard extends React.Component {
       console.log(this.state.clickedCardOne, "state card 1");
       console.log(this.state.clickedCardTwo, "state card 2");
       if (cardOne.img === cardTwo.img) {
-       
-        alert("match!");
-        // keep face up or hide cards 
 
+        const newDeck = this.state.myDeck.map((deck) => {
+          console.log(this.state.clickedCardOne, deck.id)
+          if (parseInt(this.state.clickedCardOne) === deck.id) {
+            deck.flipped = true;
+          }
+          if (parseInt(this.state.clickedCardTwo) === deck.id) {
+            deck.flipped = true;
+          }
+          return deck;
+        });
+        this.setState({ myDeck: newDeck, isMatch: true });
 
       } else {
-      alert("no match")
-      // cardone card2 flipped = false
 
+        const newDeck = this.state.myDeck.map((deck) => {
+          if (parseInt(this.state.clickedCardOne) === deck.id) {
+            deck.flipped = false;
+          }
+          if (parseInt(this.state.clickedCardTwo) === deck.id) {
+            deck.flipped = false;
+          }
+          return deck;
+        });
+        this.setState({ myDeck: newDeck, isMatch:false });
       }
-  
       this.setState({ clickedCardOne: "", clickedCardTwo: "" });
-
     }
   }
 
@@ -59,6 +71,9 @@ class Gameboard extends React.Component {
         img={singleCard.img}
         inspectCard={this.setCardState}
         flipped={singleCard.flipped}
+        isMatch={this.state.isMatch}
+        clickedCardOne={this.state.clickedCardOne}
+        clickedCardTwo={this.state.clickedCardTwo}
       />
     );
   }
@@ -72,12 +87,13 @@ class Gameboard extends React.Component {
 
   setCardState(myCard) {
     console.log(myCard, "line 33 mycard");
-
     if (!this.state.clickedCardOne) {
       this.setState({ clickedCardOne: myCard });
-    } else if (!this.state.clickedCardTwo && this.state.clickedCardOne != myCard) {
+    } else if (
+      !this.state.clickedCardTwo &&
+      this.state.clickedCardOne != myCard
+    ) {
       this.setState({ clickedCardTwo: myCard });
-
     }
   }
 
@@ -98,7 +114,7 @@ class Gameboard extends React.Component {
       deck[currentIndex] = deck[randomIndex];
       deck[randomIndex] = temporaryValue;
     }
-    this.setState({myDeck: deck})
+    this.setState({ myDeck: deck });
 
     return deck;
   }
@@ -115,12 +131,11 @@ class Gameboard extends React.Component {
         >
           Start Game
           <i className="material-icons right"></i>
-
         </button>
         <div className="row">
-           {this.state.myDeck.map((card) => this.createCard(card))}
+          {this.state.myDeck.map((card) => this.createCard(card))}
         </div>
-
+        {console.log(this.state.myDeck, "myDeck line 143")}
       </div>
     );
   }
